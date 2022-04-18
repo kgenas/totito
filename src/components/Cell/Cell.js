@@ -9,7 +9,7 @@ export const Cell = ( props ) => {
     })
 
     const cellContentCss = classNames({
-        'cell-contet': true,
+        'cell--contet': true,
         populated: props.value 
     })
 

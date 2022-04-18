@@ -1,4 +1,3 @@
-
 const winnningMatrix = {
     0:[[1,2],[3,6],[4,8]], //? example 0,1,2 o 0,3,6 o 0,4,8
     1:[[0,2],[4,7]],
@@ -20,26 +19,25 @@ export const WinnerCalculator = (cellValues, numberOfTurn, cellIndex) =>{
         const firstOption =  cellValues[WinningOption[0]];
         const secondOption = cellValues[WinningOption[1]];
 
-        if(currentValue === firstOption && firstOption === secondOption ){            
-            return{
-                finished: true,
-                winner: currentValue,
-                winningCombination: [cellIndex,WinningOption[0],WinningOption[1]]
-            };
+        if(currentValue === firstOption && firstOption === secondOption ){ 
+            return{           
+            finish:true,
+            winner:currentValue,
+            winningCombination:[cellIndex,WinningOption[0],WinningOption[1]]
+        };
         }
     }
 
     if( numberOfTurn === 0 ){
         return{
-            finished: true,
+            finish: true,
             winner: undefined,
-            winningCombination: []
-        };
+            winningCombination:[]
+        }
     }
     return{
-        finished:false,
+        finish: false,
         winner: undefined,
         winningCombination:[]
     }
-
 }

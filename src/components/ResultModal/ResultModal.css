@@ -1,5 +1,5 @@
  
-  #modal-overlay {
+  .modal-overlay {
     display: none;
     /* display: grid; */
     justify-content: center;
@@ -11,22 +11,22 @@
     background: var(--modal-overlay-color);
   }
   
-  #modal-overlay.modal-open {
+  .modal-overlay--modal-open {
     display: grid;
   }
-  #game-result-modal {
+  .game-result-modal {
     display: grid;
     grid-row-gap: 76vmin;
   
     --modal-items-border-radius: 1vmin;
   }
   
-  #result-container {
+  .result-container {
     display: flex;
     align-items: flex-end;
   }
   
-  #winner-container {
+  .winner-container {
     margin-bottom: 4vmin;
     width: 30vmin;
     height: 8vmin;
@@ -42,14 +42,14 @@
     align-items: center;
   }
   
-  #new-game-container {
+  .new-game-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 2.5vmin;
   }
   
-  #new-game-container > button {
+  .new-game-container__button {
     font-size: 3vmin;
     padding: 1.5vmin;
     color: var(--accent-color);
@@ -60,8 +60,8 @@
     box-shadow: var(--box-shadow);
   }
   
-  #new-game-container > button:hover,
-  #new-game-container > button:active {
+  .new-game-container__button:hover,
+  .new-game-container__button:active {
     color: var(--content-background-color);
     cursor: pointer;
     background: var(--primary-highlight-gradient);

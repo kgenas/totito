@@ -12,20 +12,20 @@
     box-shadow: var(--box-shadow);
   }
   
-  .cell:active, .cell:hover, .cell.winner {
-    cursor: pointer;
-    color: var(--content-background-color);
-    background: var(--primary-highlight-gradient);
-  }
+.cell:active, .cell:hover, .cell.winner {
+  cursor: pointer;
+  color: var(--content-background-color);
+  background: var(--primary-highlight-gradient);
+}
   
-  .cell-content {
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    transition: width var(--selection-animation-duration), height var(--selection-animation-duration);
-  }
+.cell--content {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  transition: width var(--selection-animation-duration), height var(--selection-animation-duration);
+}
   
-  .cell-content.populated {
-    width: 12vmin;
-    height: 12vmin;
-  }
+.cell--content.populated {
+  width: 12vmin;
+  height: 12vmin;
+}

@@ -8,17 +8,18 @@ const initialState = {
     winner:undefined,
     xIsNext: true
 }
-export const gameReducer = (state = initialState, action) => {
+export const game = (state = initialState, action) => {
   
     switch(action.type){
-        case types.cellValues:            
-            return {                            
+        case types.click:            
+            return {           
+                ...state,                 
                 cellValues: action.payload.cellValues,
                 isGameOver: action.payload.isGameOver,
                 numberOfTurn: action.payload.numberOfTurn,
-                winningCombination: action.payload.winningCombination,                
+                winningCombination: action.payload.winningCombination,
                 winner: action.payload.winner,
-                xIsNext: action.payload.isNext                
+                xIsNext: action.payload.isNext
             }
         case types.newGame:
             return state = initialState

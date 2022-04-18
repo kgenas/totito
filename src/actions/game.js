@@ -4,8 +4,8 @@ export const startGame = () =>({
     type: types.start
 })
 
-export const Clicked = (cellValues,numberOfTurn,isNext,isGameOver,winner,winningCombination) =>({
-    type: types.cellValues,
+export const Click = (cellValues,numberOfTurn,isNext,isGameOver,winner,winningCombination) =>({
+    type: types.click,
     payload:{
         cellValues,
         numberOfTurn,

@@ -4,12 +4,10 @@ import { Cell } from '../Cell/Cell';
 
 export const Board = (props) => {
   
-
-  const { cellValues } = useSelector( state => state.GameTotito)  
-  const { winningCombination } = useSelector( state => state.GameTotito)
+  const { cellValues, winningCombination } = useSelector( state => state.Game)
   const cell = cellValues.map((value, index)=>{
         
-    const switchOnOff = winningCombination && winningCombination.indexOf(index) >=0;
+    const switchOnOff = winningCombination && winningCombination.indexOf(index) >= 0;
     return(
         <Cell
             key= { index }
@@ -21,7 +19,7 @@ export const Board = (props) => {
   })
 
   return (
-    <div id='board'>
+    <div className='board'>
         { cell }
     </div>
   )

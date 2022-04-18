@@ -6,9 +6,11 @@ import './ResultModal.css';
 export const ResultModal = () =>{
 
     const dispatch = useDispatch();
-    const { isGameOver, winner } = useSelector( state => state.GameTotito) ;
+    const { isGameOver, winner } = useSelector( state => state.Game) ;
     const resultMondalClasses = classNames({
-        'modal-open': isGameOver
+        'modal-overlay': true,
+        'modal-overlay--modal-open': isGameOver
+
     })
     const message = winner ? `Winner is ${ winner }.` :'It is a tie';
 
@@ -16,16 +18,16 @@ export const ResultModal = () =>{
         dispatch(NewGame());
     }
     return(
-        <div id='modal-overlay' className={ resultMondalClasses }>
-            <div id='game-result-modal'>
-                <div id='result-container'>
-                    <div id='winner-container'>
+        <div className= { resultMondalClasses }>
+            <div className='game-result-modal'>
+                <div className='result-container'>
+                    <div className='winner-container'>
                         <span>{ message }</span>
                     </div>
                 </div>
-                <div id='new-game-container'>
+                <div className='new-game-container'>
                     <button
-                        id='new-game-container'
+                        className='new-game-container__button'
                         onClick={ newGame }
                     >
                         Start New Game

@@ -1,9 +1,9 @@
 
 import { createStore, combineReducers } from 'redux';
-import { gameReducer } from '../reducers/gameReducer';
+import { game } from '../reducers/gameReducer';
 
 const reducers = combineReducers({
-    GameTotito:gameReducer
+    Game:game
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();

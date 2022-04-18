@@ -1,4 +1,4 @@
-#game {
+.game {
   background: var(--content-background-color);
   border-radius: var(--default-border-radius);
   padding: 3vmin;

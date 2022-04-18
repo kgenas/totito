@@ -23,19 +23,19 @@
     --selection-animation-duration: 350ms;
   }
   
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    display: grid;
-    place-items: center center;
-    background: var(--main-background-gradient);
-    font-family: Arial, Helvetica, sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center center;
+  background: var(--main-background-gradient);
+  font-family: Arial, Helvetica, sans-serif;
+}
